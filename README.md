@@ -7,6 +7,7 @@ Direct-response landing page for Facebook traffic that sells Merchynt's Google r
 | `index.html` | The page. Open it directly in a browser, or run the `nfc-review-cards` config in `.claude/launch.json` (port 3461). Single file: Tailwind CDN, DM Sans, vanilla JS. |
 | `creative-brief.md` | Research, strategy, page structure, copy rationale, claims and sources, tracking plan, test ideas, open questions. |
 | `replit-prompt.md` | Sectioned prompts to rebuild the page pixel for pixel in Replit (or inside the existing store app). |
+| `lovable-prompt.md` | Sectioned prompts to rebuild the page pixel for pixel in Lovable as a React + Vite + Tailwind project (16 prompts: design system, one per section, API client and order state, wiring, behavior, QA). |
 | `assets/hero-tap.jpg` | Hero photo: customer tapping a phone on the card at a cafe counter (generated, GPT Image 2.5 via Higgsfield, reference-matched to the real card). |
 | `assets/salon-counter.jpg` | Card on a salon front desk (generated). Used in the Problem section. |
 | `assets/handoff.jpg` | Technician handing the card to a homeowner (generated). Used in Who It's For. |
