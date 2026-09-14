@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get More Google Reviews With One Tap | NFC Review Cards from $7 | Merchynt</title>
+  <meta name="description" content="A pre-programmed NFC card for your counter. Customers tap their phone and your Google review page opens. No app, no monthly fee, ships unbranded. 30% off and free shipping for a limited time.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="Get More Google Reviews With One Tap">
+  <meta property="og:description" content="Pre-programmed NFC review cards. $7 a card with 30% off, free shipping in the USA, ready to use the day they arrive.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/hero-tap.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f007d',
+            navydeep: '#08004a',
+            pink: '#dd0cf7',
+            blue: '#0063fd',
+            purple: '#8b00cc',
+            green: '#05c168',
+            orange: '#ff9e2c',
+            dark: '#1c1f23',
+            muted: '#8E8B84',
+            cloud: '#f6f5ff',
+            line: '#e6e4f2',
+          },
+          fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+          boxShadow: {
+            card: '0 10px 30px -10px rgba(15, 0, 125, 0.18)',
+            float: '0 24px 60px -20px rgba(8, 0, 74, 0.55)',
+            panel: '0 30px 80px -30px rgba(15, 0, 125, 0.25)',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity .6s ease-out, transform .6s ease-out; }
+    .fade-up.visible { opacity: 1; transform: none; }
+    .hero-animate { opacity: 0; transform: translateY(16px); animation: heroUp .7s ease-out forwards; }
+    .d1 { animation-delay: .05s } .d2 { animation-delay: .2s } .d3 { animation-delay: .35s } .d4 { animation-delay: .5s } .d5 { animation-delay: .7s }
+    @keyframes heroUp { to { opacity: 1; transform: none; } }
+    @keyframes ctaPulse { 0%,100% { box-shadow: 0 0 0 0 rgba(221,12,247,.45); } 50% { box-shadow: 0 0 0 10px rgba(221,12,247,0); } }
+    .cta-pulse { animation: ctaPulse 2.4s ease-in-out 1.2s 3; }
+    .cta-btn { transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, opacity .15s ease; }
+    .cta-btn:hover { transform: translateY(-1px) scale(1.02); }
+    .cta-btn:active { transform: translateY(0) scale(.99); }
+    .cta-btn:disabled { opacity: .55; cursor: not-allowed; transform: none; }
+    .hero-grid { background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px); background-size: 22px 22px; }
+    .float-a { animation: floatA 6s ease-in-out infinite; }
+    .float-b { animation: floatB 7s ease-in-out infinite; }
+    @keyframes floatA { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-8px) } }
+    @keyframes floatB { 0%,100% { transform: translateY(0) } 50% { transform: translateY(7px) } }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+    .faq-answer.open { max-height: 420px; }
+    .faq-chevron { transition: transform .3s ease; }
+    .faq-chevron.rotated { transform: rotate(180deg); }
+    .sticky-cta { transform: translateY(110%); transition: transform .3s ease; }
+    .sticky-cta.show { transform: translateY(0); }
+    /* phone mockup */
+    .phone { width: 250px; border-radius: 38px; background: #0b0b12; padding: 10px; box-shadow: 0 30px 70px -25px rgba(8,0,74,.6), inset 0 0 0 2px #2a2a38; }
+    .phone-screen { border-radius: 30px; background: #fff; overflow: hidden; min-height: 500px; }
+    .star-fill { transition: fill .25s ease; }
+    /* form */
+    .field { width: 100%; border: 1.5px solid #e6e4f2; border-radius: 12px; padding: 12px 14px; font-size: 15px; background: #fff; color: #1c1f23; outline: none; transition: border-color .15s ease, box-shadow .15s ease; }
+    .field:focus { border-color: #0f007d; box-shadow: 0 0 0 4px rgba(15,0,125,.08); }
+    .field.error { border-color: #dd0cf7; }
+    .field::placeholder { color: #a7a4b3; }
+    .field:disabled { background: #f6f5ff; color: #8E8B84; }
+    .label { display: block; font-size: 13px; font-weight: 600; color: #1c1f23; margin-bottom: 6px; }
+    .qty-chip { border: 1.5px solid #e6e4f2; border-radius: 14px; padding: 12px 10px; text-align: center; cursor: pointer; transition: all .15s ease; background: #fff; }
+    .qty-chip:hover { border-color: #0f007d; }
+    .qty-chip.active { border-color: #0f007d; background: #0f007d; color: #fff; box-shadow: 0 10px 24px -12px rgba(15,0,125,.5); }
+    .qty-chip.active .qty-sub { color: rgba(255,255,255,.75); }
+    .choice { border: 1.5px solid #e6e4f2; border-radius: 12px; padding: 10px 14px; cursor: pointer; font-size: 14px; font-weight: 600; text-align: center; transition: all .15s ease; }
+    .choice:hover { border-color: #0f007d; }
+    .choice.active { border-color: #0f007d; background: rgba(15,0,125,.05); color: #0f007d; }
+    .biz-result { display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; cursor: pointer; border: 1.5px solid transparent; transition: all .15s ease; }
+    .biz-result:hover { background: #f6f5ff; border-color: #e6e4f2; }
+    .suggest { position: absolute; left: 0; right: 0; top: calc(100% + 6px); background: #fff; border: 1.5px solid #e6e4f2; border-radius: 12px; box-shadow: 0 16px 40px -16px rgba(15,0,125,.3); z-index: 20; overflow: hidden; }
+    .suggest button { display: block; width: 100%; text-align: left; padding: 10px 14px; font-size: 14px; }
+    .suggest button:hover { background: #f6f5ff; }
+    .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.4); border-top-color: #fff; border-radius: 9999px; animation: spin .7s linear infinite; display: inline-block; }
+    .spinner.dark { border-color: rgba(15,0,125,.2); border-top-color: #0f007d; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .step-num { width: 34px; height: 34px; border-radius: 9999px; background: #0f007d; color: #fff; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-num.done { background: #05c168; }
+    .strike { text-decoration: line-through; text-decoration-thickness: 2px; text-decoration-color: #dd0cf7; }
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .hero-animate { opacity: 1; transform: none; animation: none; transition: none; }
+      .cta-pulse, .float-a, .float-b { animation: none; }
+    }
+  </style>
+  <!--
+    TRACKING PLACEHOLDERS (James to add before launch):
+    - Meta Pixel base code. The page calls fbq() for ViewContent, AddToCart, AddPaymentInfo and InitiateCheckout if fbq exists.
+      Purchase must fire on the store's confirmation page (reviewstore.merchynt.com/order/confirmation), see creative-brief.md.
+    - Microsoft Clarity
+    - Vercel Analytics: <script defer src="/_vercel/insights/script.js"></script>
+  -->
+</head>
+<body class="bg-white text-dark font-sans">
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="absolute top-0 inset-x-0 z-30">
+    <div class="max-w-6xl mx-auto px-5 py-5 flex items-center justify-between">
+      <a href="#top" aria-label="Merchynt"><img src="assets/merchynt-logo.svg" alt="Merchynt" class="h-7 sm:h-8 brightness-0 invert hero-animate d1"></a>
+      <a href="#order" data-cta="header" class="cta-btn hero-animate d2 hidden sm:inline-flex items-center gap-2 rounded-full bg-pink text-white text-sm font-semibold px-5 py-2.5 shadow-card">
+        Get 30% Off
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="top" class="relative bg-navy text-white overflow-hidden">
+    <div class="absolute inset-0 hero-grid opacity-70"></div>
+    <div class="absolute -top-40 -right-32 w-[560px] h-[560px] rounded-full bg-blue/30 blur-3xl"></div>
+    <div class="absolute -bottom-48 -left-32 w-[520px] h-[520px] rounded-full bg-pink/25 blur-3xl"></div>
+    <div class="relative max-w-6xl mx-auto px-5 pt-28 pb-16 sm:pt-32 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+      <div class="lg:col-span-6">
+        <div class="hero-animate d1 inline-flex items-center gap-2 rounded-full bg-white/10 border border-white/15 px-3.5 py-1.5 text-xs sm:text-sm font-semibold tracking-wide">
+          <span class="w-2 h-2 rounded-full bg-green"></span>
+          Limited time: 30% off + free shipping
+        </div>
+        <h1 class="hero-animate d2 mt-5 text-4xl sm:text-5xl lg:text-[3.4rem] font-extrabold leading-[1.05] tracking-tight">
+          Get More Google Reviews With <span class="text-pink">One Tap</span>
+        </h1>
+        <p class="hero-animate d3 mt-5 text-lg sm:text-xl text-white/80 leading-relaxed max-w-xl">
+          A pre-programmed NFC card for your counter. Customers tap their phone, your Google review page opens, and they write the review while the good experience is still fresh. No app, no monthly fee, no Merchynt branding.
+        </p>
+        <div class="hero-animate d4 mt-7 flex flex-col sm:flex-row sm:items-center gap-4">
+          <a href="#order" data-cta="hero" class="cta-btn cta-pulse inline-flex items-center justify-center gap-2 rounded-full bg-pink text-white text-base sm:text-lg font-bold px-8 py-4 shadow-float">
+            Get My Cards for 30% Off
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+          <div class="text-sm text-white/75 leading-snug">
+            <span class="strike text-white/50">$10</span> <span class="text-white font-bold text-base">$7 per card</span><br>
+            Free shipping in the USA
+          </div>
+        </div>
+        <div class="hero-animate d5 mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-white/75">
+          <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Arrives programmed and ready to use</span>
+          <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Works with iPhone and Android</span>
+          <span class="inline-flex items-center gap-2"><svg class="w-4 h-4 text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Mailed next business day</span>
+        </div>
+      </div>
+
+      <div class="lg:col-span-6 relative hero-animate d3">
+        <div class="relative rounded-3xl overflow-hidden shadow-float border border-white/10 bg-white/5">
+          <img src="assets/hero-tap.jpg" alt="A customer taps their phone on a Google review NFC card at a cafe counter" class="w-full h-[320px] sm:h-[440px] object-cover" width="1536" height="1024">
+        </div>
+        <!-- floating price card -->
+        <div class="float-a absolute -bottom-5 -left-3 sm:-left-8 bg-white text-dark rounded-2xl shadow-float px-5 py-4 w-[210px]">
+          <div class="text-[11px] font-semibold uppercase tracking-wider text-muted">Per card, this week</div>
+          <div class="mt-1 flex items-baseline gap-2">
+            <span class="text-3xl font-extrabold text-navy">$7</span>
+            <span class="strike text-muted font-semibold">$10</span>
+          </div>
+          <div class="mt-1 text-xs font-semibold text-green inline-flex items-center gap-1"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>Free shipping included</div>
+        </div>
+        <!-- floating review notification -->
+        <div class="float-b absolute -top-4 -right-2 sm:-right-6 bg-white text-dark rounded-2xl shadow-float px-4 py-3 w-[230px]">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-cloud flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5" viewBox="0 0 24 24"><path fill="#4285F4" d="M21.6 12.2c0-.7-.1-1.4-.2-2H12v3.9h5.4c-.2 1.2-.9 2.3-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.4z"/><path fill="#34A853" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 1-3.4 1-2.6 0-4.8-1.8-5.6-4.1H3.1v2.6C4.8 19.9 8.1 22 12 22z"/><path fill="#FBBC05" d="M6.4 14c-.2-.6-.3-1.3-.3-2s.1-1.4.3-2V7.4H3.1C2.4 8.8 2 10.4 2 12s.4 3.2 1.1 4.6L6.4 14z"/><path fill="#EA4335" d="M12 5.9c1.5 0 2.8.5 3.8 1.5l2.9-2.9C17 2.9 14.7 2 12 2 8.1 2 4.8 4.1 3.1 7.4L6.4 10c.8-2.3 3-4.1 5.6-4.1z"/></svg>
+            </div>
+            <div class="min-w-0">
+              <div class="text-[13px] font-bold leading-tight">New 5-star review</div>
+              <div class="mt-0.5 flex items-center gap-1 text-orange"><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg><span class="text-[11px] text-muted ml-1">just now</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== STATS BAR ===================== -->
+  <section class="bg-white border-b border-line">
+    <div class="max-w-6xl mx-auto px-5 py-10 sm:py-12">
+      <div class="grid sm:grid-cols-3 gap-6 sm:gap-8">
+        <div class="fade-up text-center sm:text-left">
+          <div class="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight">97%</div>
+          <p class="mt-2 text-sm sm:text-base text-dark/80 leading-snug">of consumers read reviews before choosing a local business</p>
+        </div>
+        <div class="fade-up text-center sm:text-left" style="transition-delay:.1s">
+          <div class="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight">83%</div>
+          <p class="mt-2 text-sm sm:text-base text-dark/80 leading-snug">of people who were asked to leave a review went on to leave one</p>
+        </div>
+        <div class="fade-up text-center sm:text-left" style="transition-delay:.2s">
+          <div class="text-4xl sm:text-5xl font-extrabold text-navy tracking-tight">47%</div>
+          <p class="mt-2 text-sm sm:text-base text-dark/80 leading-snug">won't use a business that has fewer than 20 reviews</p>
+        </div>
+      </div>
+      <p class="fade-up mt-6 text-xs text-muted text-center sm:text-left">Source: BrightLocal Local Consumer Review Survey 2026, 1,002 US consumers.</p>
+    </div>
+  </section>
+
+  <!-- ===================== PROBLEM ===================== -->
+  <section class="bg-cloud">
+    <div class="max-w-6xl mx-auto px-5 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6 fade-up">
+        <div class="text-xs font-bold uppercase tracking-[0.18em] text-pink">The problem</div>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">Your customers would leave a review. Nobody asks them at the right moment.</h2>
+        <p class="mt-5 text-base sm:text-lg text-dark/80 leading-relaxed">
+          Most owners ask the hard way. A text the next day. An email that lands in Promotions. A "review us" sign that asks people to type a URL. By then the moment has passed. The customer who was happy at the counter is busy again, and the review never gets written.
+        </p>
+        <p class="mt-4 text-base sm:text-lg text-dark/80 leading-relaxed">
+          The card fixes the timing. It sits where customers already have their phone out, and it turns "would you mind leaving us a review?" into a two-second tap.
+        </p>
+        <div class="mt-7 rounded-2xl overflow-hidden shadow-card hidden sm:block">
+          <img src="assets/salon-counter.jpg" alt="A Google review NFC card standing on a salon front desk" class="w-full h-56 lg:h-64 object-cover" width="1168" height="880" loading="lazy">
+        </div>
+      </div>
+      <div class="lg:col-span-6 grid gap-4">
+        <div class="fade-up bg-white rounded-2xl p-5 shadow-card flex gap-4 items-start">
+          <div class="w-10 h-10 rounded-xl bg-cloud flex items-center justify-center flex-shrink-0 text-navy"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div><div class="font-bold">The next-day text</div><p class="mt-1 text-sm text-dark/70">Buried under forty other notifications. Opened, maybe. Acted on, rarely.</p></div>
+        </div>
+        <div class="fade-up bg-white rounded-2xl p-5 shadow-card flex gap-4 items-start" style="transition-delay:.1s">
+          <div class="w-10 h-10 rounded-xl bg-cloud flex items-center justify-center flex-shrink-0 text-navy"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg></div>
+          <div><div class="font-bold">The "review us" sign</div><p class="mt-1 text-sm text-dark/70">Reading a web address, typing it, finding your listing, finding the button. Every step loses people.</p></div>
+        </div>
+        <div class="fade-up bg-navy text-white rounded-2xl p-5 shadow-card flex gap-4 items-start" style="transition-delay:.2s">
+          <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5a5 5 0 0 1 0-5M5.6 17.4a9 9 0 0 1 0-10.8M15.5 9.5a5 5 0 0 1 0 5M18.4 6.6a9 9 0 0 1 0 10.8"/><circle cx="12" cy="12" r="1.5"/></svg></div>
+          <div><div class="font-bold">The tap</div><p class="mt-1 text-sm text-white/75">Phone is already out. Your review form opens on its own. Stars, a sentence, post. Done before the receipt prints.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HOW IT WORKS ===================== -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-5 py-16 sm:py-24 grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-5 order-2 lg:order-1 flex justify-center fade-up">
+        <!-- Phone mockup: Google review screen -->
+        <div class="phone">
+          <div class="phone-screen text-[13px] text-dark">
+            <div class="flex items-center justify-between px-5 pt-4 text-[11px] font-semibold"><span>9:41</span><span class="flex items-center gap-1"><span class="w-3 h-2 bg-dark rounded-[2px] inline-block"></span></span></div>
+            <div class="flex items-center gap-3 px-4 pt-4">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              <div class="font-semibold text-[14px] leading-tight">Rate and review</div>
+            </div>
+            <div class="px-4 pt-4 flex items-center gap-3">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue to-pink text-white font-bold flex items-center justify-center">Y</div>
+              <div><div class="font-semibold text-[13px]">Your business name</div><div class="text-[11px] text-muted">Posting publicly</div></div>
+            </div>
+            <div class="px-4 pt-5 flex items-center gap-2" id="phoneStars" aria-hidden="true">
+              <svg class="w-8 h-8 star-fill" data-i="0" viewBox="0 0 24 24" fill="#d9d9e3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              <svg class="w-8 h-8 star-fill" data-i="1" viewBox="0 0 24 24" fill="#d9d9e3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              <svg class="w-8 h-8 star-fill" data-i="2" viewBox="0 0 24 24" fill="#d9d9e3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              <svg class="w-8 h-8 star-fill" data-i="3" viewBox="0 0 24 24" fill="#d9d9e3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+              <svg class="w-8 h-8 star-fill" data-i="4" viewBox="0 0 24 24" fill="#d9d9e3"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            </div>
+            <div class="mx-4 mt-5 rounded-xl border border-line p-3 min-h-[92px] text-[12px] text-dark/80" id="phoneText"><span class="text-muted">Share details of your own experience at this place</span></div>
+            <div class="px-4 mt-4 flex gap-2">
+              <div class="flex-1 rounded-full border border-line py-2 text-center text-[12px] font-semibold text-muted">Add photos</div>
+              <div class="flex-1 rounded-full bg-blue py-2 text-center text-[12px] font-semibold text-white">Post</div>
+            </div>
+            <div class="px-4 pt-6 pb-5 text-[11px] text-muted leading-snug">Opened by a tap on your card. No app, no search, no typing a link.</div>
+          </div>
+        </div>
+      </div>
+      <div class="lg:col-span-7 order-1 lg:order-2">
+        <div class="fade-up text-xs font-bold uppercase tracking-[0.18em] text-pink">How it works</div>
+        <h2 class="fade-up mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">Set up once. Then every tap is a review request.</h2>
+        <div class="mt-8 space-y-6">
+          <div class="fade-up flex gap-4">
+            <div class="step-num">1</div>
+            <div>
+              <div class="text-lg font-bold">Tell us which Google listing</div>
+              <p class="mt-1 text-dark/75 leading-relaxed">Search your business by city and name below, or paste your Google review link. We program every card to open your review page before it ships. You never touch the settings.</p>
+            </div>
+          </div>
+          <div class="fade-up flex gap-4" style="transition-delay:.1s">
+            <div class="step-num">2</div>
+            <div>
+              <div class="text-lg font-bold">Put the card where customers pay</div>
+              <p class="mt-1 text-dark/75 leading-relaxed">The register, the front desk, the check presenter, the service counter, the truck. Anywhere a phone is already out and the experience is still fresh.</p>
+            </div>
+          </div>
+          <div class="fade-up flex gap-4" style="transition-delay:.2s">
+            <div class="step-num">3</div>
+            <div>
+              <div class="text-lg font-bold">Customers tap, rate, post</div>
+              <p class="mt-1 text-dark/75 leading-relaxed">Their phone opens your Google review form on its own. They pick the stars, write a sentence, and hit Post. No app to download, nothing to type, nothing to find.</p>
+            </div>
+          </div>
+        </div>
+        <a href="#order" data-cta="how" class="fade-up cta-btn mt-9 inline-flex items-center gap-2 rounded-full bg-pink text-white font-bold px-7 py-3.5 shadow-card">
+          Order Cards for 30% Off
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRODUCT ===================== -->
+  <section class="bg-cloud">
+    <div class="max-w-6xl mx-auto px-5 py-16 sm:py-24 grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-6 fade-up">
+        <div class="relative rounded-3xl overflow-hidden shadow-card bg-white">
+          <img src="assets/card-stack.jpg" alt="A stack of Google review NFC cards" class="w-full aspect-square object-cover" width="1024" height="1024">
+          <div class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1.5 rounded-full">Ships unbranded</div>
+        </div>
+      </div>
+      <div class="lg:col-span-6">
+        <div class="fade-up text-xs font-bold uppercase tracking-[0.18em] text-pink">What you get</div>
+        <h2 class="fade-up mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">A premium card that does the asking for you</h2>
+        <ul class="mt-7 space-y-3.5">
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Pre-programmed to your Google review page.</strong> It arrives ready. Set it on the counter and it works.</span></li>
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Works with iPhones from 2018 on and any Android with NFC.</strong> The same tap your customers already use to pay.</span></li>
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>No app, no account, no monthly fee.</strong> One price, and the card keeps working.</span></li>
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>No Merchynt branding anywhere on it.</strong> Your customers see Google, five stars and "Tap to review us."</span></li>
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Durable card stock built for a counter.</strong> Survives coffee, keys and a thousand taps.</span></li>
+          <li class="fade-up flex gap-3 items-start"><svg class="w-5 h-5 text-green flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span><strong>Mailed USPS the next business day.</strong> Free shipping anywhere in the USA.</span></li>
+        </ul>
+        <div class="fade-up mt-8 bg-white rounded-2xl p-5 shadow-card border border-line">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <div class="text-xs font-semibold uppercase tracking-wider text-muted">This week's price</div>
+              <div class="mt-1 flex items-baseline gap-2"><span class="text-4xl font-extrabold text-navy">$7</span><span class="text-muted font-semibold strike">$10</span><span class="text-sm text-muted">per card</span></div>
+            </div>
+            <div class="text-sm text-dark/70 max-w-[260px]">Similar tap-to-review cards from other sellers run $16 or more each, and several charge a monthly fee on top.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== WHO IT'S FOR ===================== -->
+  <section class="bg-white">
+    <div class="max-w-6xl mx-auto px-5 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <div class="fade-up text-xs font-bold uppercase tracking-[0.18em] text-pink">Who it's for</div>
+        <h2 class="fade-up mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">Built for businesses that see their customers face to face</h2>
+        <p class="fade-up mt-4 text-dark/75 text-lg">If there's a moment when a happy customer is standing in front of you with a phone in hand, the card belongs in that moment.</p>
+      </div>
+      <div class="mt-10 grid md:grid-cols-12 gap-6 items-stretch">
+        <div class="md:col-span-5 fade-up rounded-3xl overflow-hidden shadow-card min-h-[280px]">
+          <img src="assets/handoff.jpg" alt="A technician hands a Google review card to a homeowner" class="w-full h-full object-cover" width="1536" height="1024">
+        </div>
+        <div class="md:col-span-7 grid sm:grid-cols-2 gap-4">
+          <div class="fade-up bg-cloud rounded-2xl p-5"><div class="font-bold text-navy">Restaurants and cafes</div><p class="mt-1 text-sm text-dark/70">By the register, or tucked into the check presenter.</p></div>
+          <div class="fade-up bg-cloud rounded-2xl p-5" style="transition-delay:.05s"><div class="font-bold text-navy">Salons and barbers</div><p class="mt-1 text-sm text-dark/70">At the front desk while they're settling up and still admiring the cut.</p></div>
+          <div class="fade-up bg-cloud rounded-2xl p-5" style="transition-delay:.1s"><div class="font-bold text-navy">Auto shops</div><p class="mt-1 text-sm text-dark/70">On the service counter when the keys come back.</p></div>
+          <div class="fade-up bg-cloud rounded-2xl p-5" style="transition-delay:.15s"><div class="font-bold text-navy">Dentists and clinics</div><p class="mt-1 text-sm text-dark/70">At the checkout window, where every patient stops on the way out.</p></div>
+          <div class="fade-up bg-cloud rounded-2xl p-5" style="transition-delay:.2s"><div class="font-bold text-navy">Contractors and home services</div><p class="mt-1 text-sm text-dark/70">Hand it over at the door when the job is done and the customer is impressed.</p></div>
+          <div class="fade-up bg-cloud rounded-2xl p-5" style="transition-delay:.25s"><div class="font-bold text-navy">Retail and boutiques</div><p class="mt-1 text-sm text-dark/70">Right next to the card reader, where the phone already is.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER ===================== -->
+  <section id="order" class="bg-cloud border-t border-line scroll-mt-4">
+    <div class="max-w-6xl mx-auto px-5 py-16 sm:py-24">
+      <div class="max-w-2xl">
+        <div class="fade-up text-xs font-bold uppercase tracking-[0.18em] text-pink">Order</div>
+        <h2 class="fade-up mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">Order your cards</h2>
+        <p class="fade-up mt-3 text-dark/75 text-lg">30% off is applied for you. Free shipping in the USA. Payment happens on a secure Stripe checkout page.</p>
+      </div>
+
+      <div class="mt-10 grid lg:grid-cols-12 gap-8 items-start">
+        <!-- LEFT: form -->
+        <div class="lg:col-span-7 space-y-6">
+
+          <!-- Step 1: quantity -->
+          <div class="fade-up bg-white rounded-3xl shadow-card border border-line p-6 sm:p-8">
+            <div class="flex items-center gap-3">
+              <div class="step-num" id="stepNum1">1</div>
+              <h3 class="text-xl font-bold">How many cards?</h3>
+            </div>
+            <p class="mt-2 text-sm text-dark/70 ml-[46px]">One for the register is the minimum. Add one for each person who talks to customers.</p>
+            <div class="mt-5 grid grid-cols-4 gap-2 sm:gap-3" id="qtyChips">
+              <button type="button" class="qty-chip" data-qty="1"><div class="text-xl font-extrabold">1</div><div class="qty-sub text-[11px] text-muted font-medium">card</div></button>
+              <button type="button" class="qty-chip" data-qty="3"><div class="text-xl font-extrabold">3</div><div class="qty-sub text-[11px] text-muted font-medium">cards</div></button>
+              <button type="button" class="qty-chip" data-qty="5"><div class="text-xl font-extrabold">5</div><div class="qty-sub text-[11px] text-muted font-medium">cards</div></button>
+              <button type="button" class="qty-chip" data-qty="10"><div class="text-xl font-extrabold">10</div><div class="qty-sub text-[11px] text-muted font-medium">cards</div></button>
+            </div>
+            <div class="mt-4 flex items-center gap-3">
+              <span class="text-sm text-dark/70">Or pick a number:</span>
+              <div class="inline-flex items-center border border-line rounded-full overflow-hidden">
+                <button type="button" id="qtyMinus" class="px-3.5 py-2 text-navy font-bold hover:bg-cloud" aria-label="Fewer cards">&minus;</button>
+                <input id="qtyInput" type="number" min="1" max="500" value="3" class="w-14 text-center font-bold outline-none py-2" aria-label="Number of cards">
+                <button type="button" id="qtyPlus" class="px-3.5 py-2 text-navy font-bold hover:bg-cloud" aria-label="More cards">+</button>
+              </div>
+              <span class="text-sm font-semibold text-green" id="qtySavings"></span>
+            </div>
+          </div>
+
+          <!-- Step 2: business -->
+          <div class="fade-up bg-white rounded-3xl shadow-card border border-line p-6 sm:p-8">
+            <div class="flex items-center gap-3">
+              <div class="step-num" id="stepNum2">2</div>
+              <h3 class="text-xl font-bold">Which Google listing should the card open?</h3>
+            </div>
+            <p class="mt-2 text-sm text-dark/70 ml-[46px]">We program the cards to your Google review page before they ship.</p>
+
+            <div id="bizSearchWrap" class="mt-5">
+              <div class="grid sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="label" for="bizCity">City your business is in</label>
+                  <input id="bizCity" class="field" type="text" placeholder="e.g. Austin, TX" autocomplete="off">
+                </div>
+                <div>
+                  <label class="label" for="bizName">Business name</label>
+                  <input id="bizName" class="field" type="text" placeholder="e.g. Joe's Plumbing" autocomplete="off">
+                </div>
+              </div>
+              <div id="bizStatus" class="mt-3 text-sm text-muted min-h-[20px]"></div>
+              <div id="bizResults" class="mt-2 space-y-1 hidden"></div>
+              <button type="button" id="toggleLinkMode" class="mt-4 text-sm font-semibold text-blue hover:underline">Service-area business or can't find it? Paste your Google review link instead</button>
+            </div>
+
+            <div id="bizLinkWrap" class="mt-5 hidden">
+              <label class="label" for="reviewLinkInput">Your Google review link</label>
+              <input id="reviewLinkInput" class="field" type="url" placeholder="https://g.page/r/... or https://search.google.com/local/writereview?placeid=..." autocomplete="off">
+              <div id="linkStatus" class="mt-2 text-sm min-h-[20px]"></div>
+              <label id="linkOverrideWrap" class="mt-2 hidden items-center gap-2 text-sm text-dark/80 cursor-pointer"><input type="checkbox" id="linkOverride" class="w-4 h-4 accent-[#0f007d]"> Use this link anyway. I've checked that it opens my Google review form.</label>
+              <div class="mt-3 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
+                <a href="https://support.google.com/business/answer/3474122" target="_blank" rel="noreferrer" class="font-semibold text-blue hover:underline">How do I find my Google review link?</a>
+                <button type="button" id="toggleSearchMode" class="font-semibold text-blue hover:underline">Search for my business instead</button>
+              </div>
+            </div>
+
+            <div id="bizSelected" class="mt-5 hidden">
+              <div class="flex items-center gap-4 rounded-2xl border-2 border-green/60 bg-green/5 p-4">
+                <img id="selPhoto" src="" alt="" class="w-14 h-14 rounded-xl object-cover bg-cloud hidden">
+                <div class="w-14 h-14 rounded-xl bg-cloud flex items-center justify-center text-navy" id="selPhotoFallback"><svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg></div>
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center gap-2"><span class="text-xs font-bold uppercase tracking-wider text-green">Selected</span></div>
+                  <div class="font-bold truncate" id="selName"></div>
+                  <div class="text-sm text-dark/70 truncate" id="selMeta"></div>
+                </div>
+                <button type="button" id="changeBiz" class="text-sm font-semibold text-blue hover:underline flex-shrink-0">Change</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: details -->
+          <div class="fade-up bg-white rounded-3xl shadow-card border border-line p-6 sm:p-8">
+            <div class="flex items-center gap-3">
+              <div class="step-num" id="stepNum3">3</div>
+              <h3 class="text-xl font-bold">Where should we ship them?</h3>
+            </div>
+            <p class="mt-2 text-sm text-dark/70 ml-[46px]">We ship within the US only. We'll email your order confirmation and call only if something needs checking.</p>
+
+            <div class="mt-5 grid sm:grid-cols-2 gap-3">
+              <div class="sm:col-span-2"><label class="label" for="email">Email address</label><input id="email" class="field" type="email" placeholder="you@business.com" autocomplete="email"></div>
+              <div><label class="label" for="phone">Cell phone number</label><input id="phone" class="field" type="tel" placeholder="(555) 123-4567" autocomplete="tel"></div>
+              <div><label class="label" for="businessName">Business name</label><input id="businessName" class="field" type="text" placeholder="Acme Co." autocomplete="organization"></div>
+              <div><label class="label" for="firstName">First name</label><input id="firstName" class="field" type="text" autocomplete="given-name"></div>
+              <div><label class="label" for="lastName">Last name</label><input id="lastName" class="field" type="text" autocomplete="family-name"></div>
+              <div class="sm:col-span-2 relative">
+                <label class="label" for="address1">Street address</label>
+                <input id="address1" class="field" type="text" placeholder="Start typing your address" autocomplete="off">
+                <div id="addrSuggest" class="suggest hidden"></div>
+              </div>
+              <div class="sm:col-span-2"><label class="label" for="address2">Apt, suite, unit <span class="font-normal text-muted">(optional)</span></label><input id="address2" class="field" type="text" autocomplete="address-line2"></div>
+              <div><label class="label" for="city">City</label><input id="city" class="field" type="text" autocomplete="address-level2"></div>
+              <div class="grid grid-cols-2 gap-3">
+                <div><label class="label" for="state">State</label><input id="state" class="field" type="text" placeholder="TX" maxlength="2" autocomplete="address-level1"></div>
+                <div><label class="label" for="postalCode">ZIP</label><input id="postalCode" class="field" type="text" placeholder="78701" autocomplete="postal-code" inputmode="numeric"></div>
+              </div>
+            </div>
+            <div id="addrStatus" class="mt-3 text-sm min-h-[20px]"></div>
+            <label id="addrOverrideWrap" class="mt-1 hidden items-center gap-2 text-sm text-dark/80 cursor-pointer"><input type="checkbox" id="addrOverride" class="w-4 h-4 accent-[#0f007d]"> Ship to this address exactly as I typed it.</label>
+
+            <div class="mt-6 pt-6 border-t border-line grid sm:grid-cols-2 gap-5">
+              <div>
+                <div class="label">Who are you buying for?</div>
+                <div class="grid grid-cols-2 gap-2" id="audienceChoices">
+                  <button type="button" class="choice active" data-aud="smb">My own business</button>
+                  <button type="button" class="choice" data-aud="agency">A client</button>
+                </div>
+              </div>
+              <div>
+                <div class="label">Are you a Paige customer?</div>
+                <div class="grid grid-cols-2 gap-2" id="paigeChoices">
+                  <button type="button" class="choice" data-paige="yes">Yes</button>
+                  <button type="button" class="choice active" data-paige="no">No</button>
+                </div>
+              </div>
+              <div id="partnerWrap" class="sm:col-span-2 hidden">
+                <div class="label">Are you in the Merchynt Agency Partner program?</div>
+                <div class="grid grid-cols-2 gap-2 max-w-xs" id="partnerChoices">
+                  <button type="button" class="choice" data-partner="yes">Yes</button>
+                  <button type="button" class="choice" data-partner="no">No</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: summary -->
+        <div class="lg:col-span-5 lg:sticky lg:top-6">
+          <div class="fade-up bg-navy text-white rounded-3xl shadow-panel p-6 sm:p-8">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-bold">Your order</h3>
+              <span class="text-[11px] font-bold uppercase tracking-wider bg-green/20 text-green px-2.5 py-1 rounded-full" id="offerBadge">30% off applied</span>
+            </div>
+            <div class="mt-5 flex items-center gap-4">
+              <img src="assets/nfc-card-product.png" alt="Google review NFC card" class="w-16 h-16 rounded-xl object-cover bg-white">
+              <div class="flex-1">
+                <div class="font-bold">Google Review NFC Card</div>
+                <div class="text-sm text-white/70" id="sumQtyLine">3 cards</div>
+              </div>
+              <div class="text-right">
+                <div class="text-sm text-white/50 strike" id="sumListLine">$30</div>
+                <div class="font-bold" id="sumNetLine">$21</div>
+              </div>
+            </div>
+            <div class="mt-5 space-y-2 text-sm border-t border-white/10 pt-4">
+              <div class="flex justify-between"><span class="text-white/70">Subtotal</span><span id="sumSubtotal">$30</span></div>
+              <div class="flex justify-between text-green"><span>30% off (<span id="sumCode">REVIEWS30</span>)</span><span id="sumDiscount">-$9</span></div>
+              <div class="flex justify-between"><span class="text-white/70">Shipping (USPS, USA)</span><span class="text-green font-semibold">Free</span></div>
+              <div class="flex justify-between text-lg font-extrabold pt-3 border-t border-white/10"><span>Total</span><span id="sumTotal">$21</span></div>
+            </div>
+            <div id="couponNotice" class="mt-3 hidden text-xs rounded-xl bg-orange/15 text-orange px-3 py-2 leading-snug"></div>
+            <details class="mt-3 text-sm">
+              <summary class="cursor-pointer text-white/60 hover:text-white">Have a different promo code?</summary>
+              <div class="mt-2 flex gap-2">
+                <input id="couponInput" class="field !bg-white/10 !border-white/20 !text-white placeholder:!text-white/40" type="text" placeholder="Code">
+                <button type="button" id="couponApply" class="rounded-xl bg-white/15 hover:bg-white/25 px-4 font-semibold">Apply</button>
+              </div>
+            </details>
+
+            <div id="formErrors" class="mt-4 hidden text-sm rounded-xl bg-pink/20 text-white px-4 py-3 leading-snug"></div>
+
+            <button type="button" id="payBtn" class="cta-btn mt-5 w-full inline-flex items-center justify-center gap-2 rounded-full bg-pink text-white text-lg font-bold px-6 py-4 shadow-float">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span id="payBtnText">Proceed to Secure Checkout</span>
+            </button>
+            <div class="mt-3 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[12px] text-white/60">
+              <span>Secure payment by Stripe</span>
+              <span>Card programmed before shipping</span>
+              <span>Unbranded</span>
+            </div>
+            <p class="mt-4 text-[12px] text-white/50 leading-snug">We mail every order USPS ground on the next business day. Delivery can take up to 10 business days depending on where you are. To keep the price this low there's no tracking number. Questions: <a class="underline" href="mailto:reviewstore@merchynt.com">reviewstore@merchynt.com</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="bg-white">
+    <div class="max-w-3xl mx-auto px-5 py-16 sm:py-24">
+      <div class="fade-up text-xs font-bold uppercase tracking-[0.18em] text-pink">Questions</div>
+      <h2 class="fade-up mt-3 text-3xl sm:text-4xl font-extrabold text-navy leading-tight tracking-tight">What owners ask before they order</h2>
+      <div class="mt-8 divide-y divide-line" id="faq">
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">Will it work with my customers' phones?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">Yes for almost everyone. iPhones from 2018 onward (XS, XR and newer) read the card automatically when it's held near the top of the phone. Android phones with NFC do the same. It's the same technology people use to tap and pay, so most customers already know the motion.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">Do I need an app or a subscription?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">No. You pay once for the cards. There's no account to create, no app for you or your customers, and no monthly fee. The card carries your review link on its own and keeps working.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">Is asking for reviews this way allowed by Google?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">Yes. Google encourages businesses to ask customers for reviews and even publishes a shareable review link for exactly this purpose. What Google prohibits is paying or rewarding people for reviews, or only asking the customers you know are happy. The card simply makes the ask easy for everyone.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">Does the card say Merchynt anywhere?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">No. The card shows the Google logo, five stars, a tap symbol and "Tap to review us." Nothing about Merchynt appears on the card or in what your customers see on their phone.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">How do you know which Google listing to use?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">You pick it in step 2 above. Search by city and business name and choose your listing from the results, or paste your Google review link if you're a service-area business without a public address. We program every card to that exact link before it ships.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">How long until it arrives?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">We mail every order USPS ground on the next business day. Most arrive within a week, and it can take up to 10 business days depending on where you are. Shipping is free. To keep the card at this price there's no tracking number.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">I have more than one location.</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">Each order is programmed to one Google listing, so place one order per location. The discount applies to every order while the offer is running.</p></div>
+        </div>
+        <div class="faq-item py-5">
+          <button type="button" class="faq-q w-full flex items-center justify-between text-left gap-4"><span class="font-bold text-lg">What if a customer doesn't know how to tap?</span><svg class="faq-chevron w-5 h-5 text-navy flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
+          <div class="faq-answer"><p class="pt-3 text-dark/75 leading-relaxed">Say "hold your phone against the card." That's the whole instruction, and it's the same motion as tapping to pay. If you'd rather offer a QR code as well, we also print a QR review flyer. Email <a class="text-blue font-semibold" href="mailto:reviewstore@merchynt.com">reviewstore@merchynt.com</a> and we'll point you to it.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FINAL CTA ===================== -->
+  <section class="relative bg-navy text-white overflow-hidden">
+    <div class="absolute inset-0 hero-grid opacity-60"></div>
+    <div class="absolute -top-32 right-0 w-[420px] h-[420px] rounded-full bg-pink/25 blur-3xl"></div>
+    <div class="relative max-w-4xl mx-auto px-5 py-20 sm:py-28 text-center">
+      <h2 class="fade-up text-3xl sm:text-5xl font-extrabold leading-tight tracking-tight">Stop hoping for reviews.<br>Ask with a tap.</h2>
+      <p class="fade-up mt-5 text-lg text-white/80 max-w-2xl mx-auto">$7 a card while the offer lasts. Free shipping. Programmed to your Google listing and ready to use the day it lands in your mailbox.</p>
+      <a href="#order" data-cta="final" class="fade-up cta-btn mt-8 inline-flex items-center gap-2 rounded-full bg-pink text-white text-lg font-bold px-9 py-4 shadow-float">
+        Get My Cards for 30% Off
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="fade-up mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70">
+        <span>No app</span><span>No monthly fee</span><span>No Merchynt branding</span><span>Ships next business day</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navydeep text-white/60">
+    <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm">
+      <div class="flex items-center gap-3"><img src="assets/merchynt-logo.svg" alt="Merchynt" class="h-5 brightness-0 invert opacity-70"><span>&copy; <span id="year"></span> Merchynt. All rights reserved.</span></div>
+      <div class="flex items-center gap-5">
+        <a href="mailto:reviewstore@merchynt.com" class="hover:text-white">reviewstore@merchynt.com</a>
+        <a href="https://www.merchynt.com/privacy-policy" target="_blank" rel="noreferrer" class="hover:text-white">Privacy</a>
+        <a href="https://www.merchynt.com/terms-of-service" target="_blank" rel="noreferrer" class="hover:text-white">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================== STICKY MOBILE CTA ===================== -->
+  <div id="stickyCta" class="sticky-cta fixed bottom-0 inset-x-0 z-40 lg:hidden bg-white/95 backdrop-blur border-t border-line px-4 py-3 flex items-center justify-between gap-3">
+    <div class="leading-tight"><div class="text-xs text-muted">NFC review cards</div><div class="font-extrabold text-navy"><span class="strike text-muted font-semibold text-sm mr-1">$10</span>$7 per card</div></div>
+    <a href="#order" data-cta="sticky" class="cta-btn inline-flex items-center gap-2 rounded-full bg-pink text-white font-bold px-5 py-3 shadow-card text-sm">Get 30% Off</a>
+  </div>
+
+  <script>
+  (function () {
+    /* ============================================================
+       CONFIG
+       ============================================================ */
+    const CONFIG = {
+      apiBase: 'https://reviewstore.merchynt.com',   // the store's backend; every order lands in the same admin
+      productKey: 'nfc_card',
+      listPriceCents: 1000,                          // fallback until /api/products loads
+      couponCode: 'REVIEWS30',                       // the 30% code, auto-applied. Must exist in the store admin.
+      offerPercent: 30,
+      defaultQty: 3,
+      minNameChars: 4,
+      searchDebounceMs: 450,
+      addrDebounceMs: 250,
+    };
+
+    const $ = (id) => document.getElementById(id);
+    const state = {
+      product: null,
+      qty: CONFIG.defaultQty,
+      coupon: null,            // { code, discountCents }
+      couponChecked: false,
+      mode: 'search',          // 'search' | 'link'
+      business: null,          // { name, address, placeId, reviewLink, photoUrl, rating, reviewCount }
+      reviewLink: '',
+      linkTrust: 'unrecognized',
+      audienceType: 'smb',
+      isPaigeCustomer: false,
+      isAgencyPartner: null,
+      addressVerified: false,
+      idempotencyKey: null,
+      submitting: false,
+      sessionCaptured: false,
+    };
+
+    const money = (cents) => {
+      const d = cents / 100;
+      return (Number.isInteger(d) ? '$' + d : '$' + d.toFixed(2));
+    };
+    const track = (evt, params) => { try { if (typeof fbq === 'function') fbq('track', evt, params || {}); } catch (e) {} };
+    const api = async (path, opts = {}) => {
+      const res = await fetch(CONFIG.apiBase + path, { credentials: 'include', ...opts, headers: { 'Accept': 'application/json', ...(opts.body ? { 'Content-Type': 'application/json' } : {}), ...(opts.headers || {}) } });
+      let data = null; try { data = await res.json(); } catch (e) {}
+      if (!res.ok) { const err = new Error((data && (data.error || data.message)) || ('Request failed (' + res.status + ')')); err.status = res.status; err.data = data; throw err; }
+      return data;
+    };
+
+    /* ============================================================
+       UTM capture (no outbound CTA, so we keep them for the pixel / Clarity)
+       ============================================================ */
+    try {
+      const p = new URLSearchParams(location.search); const keep = {};
+      ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid'].forEach(k => { if (p.get(k)) keep[k] = p.get(k); });
+      if (Object.keys(keep).length) sessionStorage.setItem('nfc_lp_attribution', JSON.stringify(keep));
+    } catch (e) {}
+
+    /* ============================================================
+       Product + pricing
+       ============================================================ */
+    const unitCents = () => (state.product && state.product.priceCents) || CONFIG.listPriceCents;
+    const subtotalCents = () => unitCents() * state.qty;
+    const discountCents = () => state.coupon ? Math.min(state.coupon.discountCents, subtotalCents()) : 0;
+    const totalCents = () => subtotalCents() - discountCents();
+
+    async function loadProduct() {
+      try {
+        const products = await api('/api/products');
+        state.product = (products || []).find(p => p.key === CONFIG.productKey) || null;
+      } catch (e) { /* fallback price stays */ }
+      renderSummary();
+    }
+
+    let couponReq = 0;
+    async function validateCoupon(code, silent) {
+      const my = ++couponReq;
+      try {
+        const q = new URLSearchParams({ code, productKey: CONFIG.productKey, quantity: String(state.qty) });
+        const r = await api('/api/orders/coupon?' + q.toString());
+        if (my !== couponReq) return;
+        if (r && r.valid && r.code) {
+          state.coupon = { code: r.code, discountCents: r.discountCents || 0 };
+          $('couponNotice').classList.add('hidden');
+        } else {
+          state.coupon = null;
+          if (!silent) showCouponNotice((r && r.message) || "That promo code isn't valid.");
+          else showCouponNotice('The ' + CONFIG.offerPercent + '% code ' + code + " isn't active yet, so the total below is the full price. Email reviewstore@merchynt.com and we'll sort it out.");
+        }
+      } catch (e) {
+        if (my !== couponReq) return;
+        state.coupon = null;
+        showCouponNotice("We couldn't check the promo code right now. Refresh the page to try again.");
+      }
+      state.couponChecked = true;
+      renderSummary();
+    }
+    function showCouponNotice(msg) { const n = $('couponNotice'); n.textContent = msg; n.classList.remove('hidden'); }
+
+    function renderSummary() {
+      const n = state.qty;
+      $('sumQtyLine').textContent = n + (n === 1 ? ' card' : ' cards') + ' at ' + money(unitCents()) + ' each';
+      $('sumSubtotal').textContent = money(subtotalCents());
+      $('sumListLine').textContent = money(subtotalCents());
+      $('sumNetLine').textContent = money(totalCents());
+      $('sumTotal').textContent = money(totalCents());
+      const hasDiscount = discountCents() > 0;
+      $('sumDiscount').textContent = hasDiscount ? '-' + money(discountCents()) : '$0';
+      $('sumCode').textContent = state.coupon ? state.coupon.code : CONFIG.couponCode;
+      $('sumListLine').classList.toggle('hidden', !hasDiscount);
+      $('offerBadge').textContent = hasDiscount ? Math.round(discountCents() / subtotalCents() * 100) + '% off applied' : 'Offer pending';
+      $('offerBadge').classList.toggle('bg-green/20', hasDiscount); $('offerBadge').classList.toggle('text-green', hasDiscount);
+      $('offerBadge').classList.toggle('bg-orange/20', !hasDiscount); $('offerBadge').classList.toggle('text-orange', !hasDiscount);
+      $('qtySavings').textContent = hasDiscount ? 'You save ' + money(discountCents()) : '';
+      $('payBtnText').textContent = 'Proceed to Secure Checkout';
+    }
+
+    /* ============================================================
+       Step 1: quantity
+       ============================================================ */
+    function setQty(n, fromInput, isInit) {
+      n = Math.max(1, Math.min(500, parseInt(n, 10) || 1));
+      state.qty = n;
+      if (!fromInput) $('qtyInput').value = n;
+      document.querySelectorAll('#qtyChips .qty-chip').forEach(b => b.classList.toggle('active', parseInt(b.dataset.qty, 10) === n));
+      $('stepNum1').classList.add('done');
+      renderSummary();
+      validateCoupon(state.coupon ? state.coupon.code : CONFIG.couponCode, true);
+      if (!isInit) { track('AddToCart', { content_name: 'NFC Review Card', content_ids: [CONFIG.productKey], content_type: 'product', num_items: n, value: totalCents() / 100, currency: 'USD' }); captureSession(); }
+    }
+    document.querySelectorAll('#qtyChips .qty-chip').forEach(b => b.addEventListener('click', () => setQty(b.dataset.qty)));
+    $('qtyMinus').addEventListener('click', () => setQty(state.qty - 1));
+    $('qtyPlus').addEventListener('click', () => setQty(state.qty + 1));
+    $('qtyInput').addEventListener('input', (e) => { if (e.target.value !== '') setQty(e.target.value, true); });
+    $('qtyInput').addEventListener('blur', (e) => setQty(e.target.value || 1));
+
+    /* ============================================================
+       Step 2: business search / review link
+       ============================================================ */
+    let searchTimer = null, searchAbort = null, lastKey = '';
+    const bizStatus = (msg, cls) => { const el = $('bizStatus'); el.textContent = msg || ''; el.className = 'mt-3 text-sm min-h-[20px] ' + (cls || 'text-muted'); };
+
+    function scheduleSearch() {
+      const city = $('bizCity').value.trim(), name = $('bizName').value.trim();
+      clearTimeout(searchTimer);
+      if (name.length < CONFIG.minNameChars || !city) {
+        $('bizResults').classList.add('hidden');
+        bizStatus(city ? (name ? 'Keep typing the business name.' : '') : (name ? 'Add the city so we can find the right listing.' : ''));
+        return;
+      }
+      const key = (city + '|' + name).toLowerCase();
+      if (key === lastKey) return;
+      searchTimer = setTimeout(() => runSearch(city, name, key), CONFIG.searchDebounceMs);
+    }
+    async function runSearch(city, name, key) {
+      if (searchAbort) searchAbort.abort();
+      searchAbort = new AbortController();
+      lastKey = key;
+      bizStatus('Searching Google for "' + name + '" in ' + city + '...');
+      try {
+        const q = new URLSearchParams({ name, city });
+        const r = await api('/api/business-search?' + q.toString(), { signal: searchAbort.signal });
+        renderResults((r && r.candidates) || [], r && r.available === false);
+      } catch (e) {
+        if (e.name === 'AbortError') return;
+        renderResults([], true);
+      }
+    }
+    function renderResults(cands, unavailable) {
+      const box = $('bizResults'); box.innerHTML = '';
+      if (!cands.length) {
+        box.classList.add('hidden');
+        bizStatus(unavailable ? "Search isn't available right now. Paste your Google review link below instead." : "No match yet. Try the city as it appears on Google, or paste your review link below.", 'text-pink');
+        return;
+      }
+      bizStatus('Pick your listing:');
+      cands.slice(0, 6).forEach(c => {
+        const el = document.createElement('button'); el.type = 'button'; el.className = 'biz-result w-full';
+        const rating = c.rating ? c.rating.toFixed(1) : null;
+        el.innerHTML = (c.photoUrl ? '<img src="' + c.photoUrl + '" alt="" class="w-12 h-12 rounded-lg object-cover bg-cloud flex-shrink-0" referrerpolicy="no-referrer">' : '<div class="w-12 h-12 rounded-lg bg-cloud flex-shrink-0"></div>')
+          + '<div class="min-w-0 text-left"><div class="font-bold truncate">' + esc(c.name) + '</div><div class="text-xs text-dark/70 truncate">' + esc(c.address || c.category || '') + '</div>'
+          + (rating ? '<div class="text-xs text-muted mt-0.5"><span class="text-orange">&#9733;</span> ' + rating + ' (' + (c.reviewCount || 0) + ' reviews)</div>' : '') + '</div>';
+        el.addEventListener('click', () => selectBusiness(c));
+        box.appendChild(el);
+      });
+      box.classList.remove('hidden');
+    }
+    function esc(s) { return String(s || '').replace(/[&<>"']/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m])); }
+
+    function selectBusiness(c) {
+      state.business = c; state.reviewLink = c.reviewLink; state.linkTrust = 'trusted';
+      $('selName').textContent = c.name;
+      $('selMeta').textContent = [c.address, c.rating ? c.rating.toFixed(1) + ' stars, ' + (c.reviewCount || 0) + ' reviews' : null].filter(Boolean).join('  ·  ');
+      if (c.photoUrl) { $('selPhoto').src = c.photoUrl; $('selPhoto').classList.remove('hidden'); $('selPhotoFallback').classList.add('hidden'); }
+      else { $('selPhoto').classList.add('hidden'); $('selPhotoFallback').classList.remove('hidden'); }
+      $('bizSearchWrap').classList.add('hidden'); $('bizLinkWrap').classList.add('hidden'); $('bizSelected').classList.remove('hidden');
+      $('stepNum2').classList.add('done');
+      if (!$('businessName').value.trim()) $('businessName').value = c.name;
+      captureSession();
+    }
+    function clearBusiness() {
+      state.business = null; state.reviewLink = ''; state.linkTrust = 'unrecognized';
+      $('bizSelected').classList.add('hidden'); $('stepNum2').classList.remove('done');
+      showMode(state.mode);
+    }
+    function showMode(mode) {
+      state.mode = mode;
+      $('bizSearchWrap').classList.toggle('hidden', mode !== 'search');
+      $('bizLinkWrap').classList.toggle('hidden', mode !== 'link');
+      if (mode === 'search') { lastKey = ''; scheduleSearch(); } else { $('reviewLinkInput').focus(); }
+    }
+    $('bizCity').addEventListener('input', scheduleSearch);
+    $('bizName').addEventListener('input', scheduleSearch);
+    $('toggleLinkMode').addEventListener('click', () => showMode('link'));
+    $('toggleSearchMode').addEventListener('click', () => showMode('search'));
+    $('changeBiz').addEventListener('click', clearBusiness);
+
+    // Mirrors the store's link classifier so the same links are accepted.
+    function classifyLink(raw) {
+      const t = (raw || '').trim(); if (!t) return 'unrecognized';
+      let u; try { u = new URL(t); } catch (e) { try { u = new URL('https://' + t); } catch (e2) { return 'unrecognized'; } }
+      const h = u.hostname.toLowerCase().replace(/^www\./, ''), p = u.pathname.toLowerCase(), s = u.search.toLowerCase();
+      if (h === 'givetings.com' || h.endsWith('.givetings.com')) return 'trusted';
+      if (h === 'g.page') return p.startsWith('/r/') ? 'trusted' : 'profile-only';
+      if (h === 'google.com' || h.endsWith('.google.com')) {
+        if (p.includes('writereview')) return 'trusted';
+        if (p.includes('/maps/place') || p.startsWith('/maps') || s.includes('cid=')) return 'profile-only';
+      }
+      return h === 'maps.app.goo.gl' ? 'profile-only' : 'unrecognized';
+    }
+    function onLinkInput() {
+      const v = $('reviewLinkInput').value.trim();
+      const trust = classifyLink(v); state.linkTrust = trust;
+      const st = $('linkStatus'), ov = $('linkOverrideWrap');
+      $('linkOverride').checked = false;
+      if (!v) { st.textContent = ''; ov.classList.add('hidden'); state.reviewLink = ''; return; }
+      if (trust === 'trusted') { st.innerHTML = '<span class="text-green font-semibold">Looks good. That link opens the Google review form.</span>'; ov.classList.add('hidden'); state.reviewLink = v; state.business = null; $('stepNum2').classList.add('done'); captureSession(); return; }
+      if (trust === 'profile-only') { st.innerHTML = '<span class="text-pink font-semibold">That link opens your profile, not the review popup.</span> <span class="text-dark/70">Use the "Get more reviews" link from your Google Business Profile, or search for your business above.</span>'; ov.classList.add('hidden'); state.reviewLink = ''; $('stepNum2').classList.remove('done'); return; }
+      st.innerHTML = '<span class="text-dark/70">We don\'t recognize that as a Google review link.</span>'; ov.classList.remove('hidden'); ov.classList.add('flex'); state.reviewLink = ''; $('stepNum2').classList.remove('done');
+    }
+    $('reviewLinkInput').addEventListener('input', onLinkInput);
+    $('linkOverride').addEventListener('change', (e) => { if (e.target.checked) { state.reviewLink = $('reviewLinkInput').value.trim(); state.business = null; $('stepNum2').classList.add('done'); } else { state.reviewLink = ''; $('stepNum2').classList.remove('done'); } });
+
+    /* ============================================================
+       Step 3: contact + shipping
+       ============================================================ */
+    const normalizePhone = (v) => { let d = (v || '').replace(/\D/g, ''); if (d.length === 11 && d.startsWith('1')) d = d.slice(1); return d.length === 10 ? '+1' + d : null; };
+    const emailOk = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test((v || '').trim());
+    $('phone').addEventListener('blur', (e) => { const d = e.target.value.replace(/\D/g, '').replace(/^1(?=\d{10}$)/, ''); if (d.length === 10) e.target.value = '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6); });
+
+    // Address autocomplete + USPS verification (same endpoints the store uses)
+    let addrTimer = null, addrReq = 0, addrPicked = false;
+    const addrStatus = (html, cls) => { const el = $('addrStatus'); el.innerHTML = html || ''; el.className = 'mt-3 text-sm min-h-[20px] ' + (cls || ''); };
+    $('address1').addEventListener('input', () => {
+      addrPicked = false; state.addressVerified = false; $('addrOverrideWrap').classList.add('hidden'); $('addrOverride').checked = false; addrStatus('');
+      const v = $('address1').value.trim(); clearTimeout(addrTimer);
+      if (v.length < 3) { $('addrSuggest').classList.add('hidden'); return; }
+      addrTimer = setTimeout(async () => {
+        const my = ++addrReq;
+        try {
+          const r = await api('/api/address/autocomplete?' + new URLSearchParams({ search: v }).toString());
+          if (my !== addrReq) return;
+          renderAddrSuggest((r && r.suggestions) || []);
+        } catch (e) { $('addrSuggest').classList.add('hidden'); }
+      }, CONFIG.addrDebounceMs);
+    });
+    function renderAddrSuggest(list) {
+      const box = $('addrSuggest'); box.innerHTML = '';
+      if (!list.length) { box.classList.add('hidden'); return; }
+      list.slice(0, 6).forEach(s => {
+        const b = document.createElement('button'); b.type = 'button'; b.textContent = s.text;
+        b.addEventListener('click', () => {
+          $('address1').value = s.streetLine || ''; $('address2').value = s.secondary || ''; $('city').value = s.city || ''; $('state').value = s.state || ''; $('postalCode').value = s.zipcode || '';
+          box.classList.add('hidden'); addrPicked = true; verifyAddress();
+        });
+        box.appendChild(b);
+      });
+      box.classList.remove('hidden');
+    }
+    document.addEventListener('pointerdown', (e) => { if (!$('addrSuggest').contains(e.target) && e.target !== $('address1')) $('addrSuggest').classList.add('hidden'); });
+    ['address2','city','state','postalCode'].forEach(id => $(id).addEventListener('blur', () => { if (addressComplete()) verifyAddress(); }));
+    $('address1').addEventListener('blur', () => { setTimeout(() => { if (!addrPicked && addressComplete() && !state.addressVerified) verifyAddress(); }, 250); });
+    const addressComplete = () => ['address1','city','state','postalCode'].every(id => $(id).value.trim());
+    let verifyReq = 0;
+    async function verifyAddress() {
+      const my = ++verifyReq;
+      addrStatus('<span class="text-muted">Checking the address with USPS...</span>');
+      try {
+        const r = await api('/api/address/verify', { method: 'POST', body: JSON.stringify({ street: $('address1').value.trim(), street2: $('address2').value.trim() || undefined, city: $('city').value.trim(), state: $('state').value.trim(), zipcode: $('postalCode').value.trim() }) });
+        if (my !== verifyReq) return;
+        if (r && r.verified) {
+          state.addressVerified = true;
+          if (r.address) { $('address1').value = r.address.address1 || $('address1').value; if (r.address.address2 != null) $('address2').value = r.address.address2; $('city').value = r.address.city || $('city').value; $('state').value = r.address.state || $('state').value; $('postalCode').value = r.address.postalCode || $('postalCode').value; }
+          addrStatus('<span class="text-green font-semibold">Address confirmed by USPS.</span>'); $('addrOverrideWrap').classList.add('hidden'); $('stepNum3').classList.add('done');
+        } else {
+          state.addressVerified = false;
+          addrStatus('<span class="text-pink font-semibold">' + esc((r && r.message) || "USPS couldn't confirm that address.") + '</span> <span class="text-dark/70">Check it, or confirm below to ship as typed.</span>');
+          $('addrOverrideWrap').classList.remove('hidden'); $('addrOverrideWrap').classList.add('flex');
+        }
+      } catch (e) {
+        if (my !== verifyReq) return;
+        state.addressVerified = false;
+        addrStatus('<span class="text-dark/70">We couldn\'t reach the address checker. Confirm below to ship as typed.</span>');
+        $('addrOverrideWrap').classList.remove('hidden'); $('addrOverrideWrap').classList.add('flex');
+      }
+    }
+
+    // Audience / Paige / partner toggles
+    document.querySelectorAll('#audienceChoices .choice').forEach(b => b.addEventListener('click', () => {
+      state.audienceType = b.dataset.aud; document.querySelectorAll('#audienceChoices .choice').forEach(x => x.classList.toggle('active', x === b));
+      $('partnerWrap').classList.toggle('hidden', state.audienceType !== 'agency'); if (state.audienceType !== 'agency') state.isAgencyPartner = null;
+      state.sessionCaptured = false; captureSession();
+    }));
+    document.querySelectorAll('#paigeChoices .choice').forEach(b => b.addEventListener('click', () => { state.isPaigeCustomer = b.dataset.paige === 'yes'; document.querySelectorAll('#paigeChoices .choice').forEach(x => x.classList.toggle('active', x === b)); }));
+    document.querySelectorAll('#partnerChoices .choice').forEach(b => b.addEventListener('click', () => { state.isAgencyPartner = b.dataset.partner === 'yes'; document.querySelectorAll('#partnerChoices .choice').forEach(x => x.classList.toggle('active', x === b)); }));
+
+    // The store records the audience choice against the visit; we do the same so admin stats stay comparable.
+    async function captureSession() {
+      if (state.sessionCaptured) return; state.sessionCaptured = true;
+      try { await api('/api/session', { method: 'POST', body: JSON.stringify({ audienceType: state.audienceType }) }); } catch (e) {}
+    }
+
+    /* ============================================================
+       Validate + submit (identical payload to the store's checkout)
+       ============================================================ */
+    function validate() {
+      const errs = []; const mark = (id, bad) => $(id).classList.toggle('error', !!bad);
+      if (!state.reviewLink) errs.push('Pick your Google listing (or paste your review link) in step 2.');
+      mark('email', !emailOk($('email').value)); if (!emailOk($('email').value)) errs.push('Enter a valid email address.');
+      const ph = normalizePhone($('phone').value); mark('phone', !ph); if (!ph) errs.push('Enter a 10-digit US cell phone number.');
+      mark('businessName', !$('businessName').value.trim()); if (!$('businessName').value.trim()) errs.push('Enter your business name.');
+      ['firstName','lastName','address1','city','state','postalCode'].forEach(id => { const bad = !$(id).value.trim(); mark(id, bad); });
+      if (['firstName','lastName'].some(id => !$(id).value.trim())) errs.push('Enter the first and last name for shipping.');
+      if (!addressComplete()) errs.push('Complete the shipping address.');
+      else if (!state.addressVerified && !$('addrOverride').checked) errs.push('Wait for the address check, or tick "Ship to this address exactly as I typed it."');
+      if (state.audienceType === 'agency' && state.isAgencyPartner === null) errs.push('Tell us whether you are in the Agency Partner program.');
+      return { ok: errs.length === 0, errs, phone: ph };
+    }
+    function showErrors(errs) {
+      const box = $('formErrors');
+      if (!errs.length) { box.classList.add('hidden'); box.innerHTML = ''; return; }
+      box.innerHTML = '<div class="font-bold mb-1">A couple of things to finish:</div><ul class="list-disc pl-5 space-y-0.5">' + errs.map(e => '<li>' + esc(e) + '</li>').join('') + '</ul>';
+      box.classList.remove('hidden');
+    }
+    function buildPayload(phone) {
+      if (!state.idempotencyKey) state.idempotencyKey = (crypto && crypto.randomUUID) ? crypto.randomUUID() : (Date.now() + '-' + Math.random().toString(36).slice(2));
+      return {
+        productKey: CONFIG.productKey,
+        quantity: state.qty,
+        idempotencyKey: state.idempotencyKey,
+        setupMethod: 'manual',
+        email: $('email').value.trim(),
+        phone,
+        businessName: $('businessName').value.trim(),
+        reviewLink: state.reviewLink || undefined,
+        audienceType: state.audienceType,
+        shippingMethod: 'standard',
+        shipping: {
+          firstName: $('firstName').value.trim(), lastName: $('lastName').value.trim(),
+          address1: $('address1').value.trim(), address2: $('address2').value.trim() || undefined,
+          city: $('city').value.trim(), state: $('state').value.trim().toUpperCase(), postalCode: $('postalCode').value.trim(),
+        },
+        couponCode: state.coupon ? state.coupon.code : undefined,
+        isPaigeCustomer: state.isPaigeCustomer === true,
+        isAgencyPartner: state.audienceType === 'agency' ? state.isAgencyPartner : null,
+        flyer: undefined,
+      };
+    }
+    $('payBtn').addEventListener('click', async () => {
+      if (state.submitting) return;
+      const v = validate(); showErrors(v.errs);
+      if (!v.ok) { $('formErrors').scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      state.submitting = true; $('payBtn').disabled = true; $('payBtnText').innerHTML = '<span class="spinner"></span>&nbsp; Opening secure checkout...';
+      track('AddPaymentInfo', { value: totalCents() / 100, currency: 'USD' });
+      track('InitiateCheckout', { content_ids: [CONFIG.productKey], content_type: 'product', num_items: state.qty, value: totalCents() / 100, currency: 'USD' });
+      try {
+        const r = await api('/api/orders', { method: 'POST', body: JSON.stringify(buildPayload(v.phone)) });
+        if (r && r.checkoutUrl) { window.location.href = r.checkoutUrl; return; }
+        throw new Error('The store did not return a checkout link.');
+      } catch (e) {
+        state.idempotencyKey = null;
+        showErrors([(e && e.message) || 'Failed to create the order. Please try again.', 'If it keeps happening, email reviewstore@merchynt.com and we will place it for you.']);
+        state.submitting = false; $('payBtn').disabled = false; renderSummary();
+      }
+    });
+
+    // Manual promo code
+    $('couponApply').addEventListener('click', () => { const c = $('couponInput').value.trim(); if (c) validateCoupon(c, false); });
+
+    /* ============================================================
+       Page behavior: fade-ups, FAQ, sticky CTA, phone demo, CTA tracking
+       ============================================================ */
+    $('year').textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((entries) => entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('visible'); io.unobserve(en.target); } }), { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+    document.querySelectorAll('.faq-q').forEach(btn => btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item'), ans = item.querySelector('.faq-answer'), chev = btn.querySelector('.faq-chevron');
+      const open = ans.classList.contains('open');
+      document.querySelectorAll('.faq-answer.open').forEach(a => { a.classList.remove('open'); a.closest('.faq-item').querySelector('.faq-chevron').classList.remove('rotated'); });
+      if (!open) { ans.classList.add('open'); chev.classList.add('rotated'); }
+    }));
+
+    const hero = $('top'), sticky = $('stickyCta'), orderSec = $('order');
+    const stickyIo = new IntersectionObserver((entries) => {
+      const heroVisible = entries.find(e => e.target === hero), orderVisible = entries.find(e => e.target === orderSec);
+      if (heroVisible) sticky.dataset.hero = heroVisible.isIntersecting ? '1' : '0';
+      if (orderVisible) sticky.dataset.order = orderVisible.isIntersecting ? '1' : '0';
+      sticky.classList.toggle('show', sticky.dataset.hero === '0' && sticky.dataset.order !== '1');
+    }, { threshold: 0.05 });
+    stickyIo.observe(hero); stickyIo.observe(orderSec);
+
+    // Phone demo: stars light up and a sentence types out when the mockup scrolls into view
+    const phoneIo = new IntersectionObserver((entries) => entries.forEach(en => {
+      if (!en.isIntersecting) return; phoneIo.disconnect();
+      const stars = Array.from(document.querySelectorAll('#phoneStars .star-fill'));
+      stars.forEach((s, i) => setTimeout(() => s.setAttribute('fill', '#ff9e2c'), 500 + i * 180));
+      const text = 'Fast, friendly and fair on price. Will be back.'; const box = $('phoneText'); let i = 0;
+      setTimeout(() => { box.innerHTML = ''; const t = setInterval(() => { box.textContent = text.slice(0, ++i); if (i >= text.length) clearInterval(t); }, 32); }, 1600);
+    }), { threshold: 0.5 });
+    phoneIo.observe(document.querySelector('.phone'));
+
+    document.querySelectorAll('a[data-cta]').forEach(a => a.addEventListener('click', () => { try { if (typeof fbq === 'function') fbq('trackCustom', 'OrderCTAClick', { placement: a.dataset.cta }); } catch (e) {} }));
+
+    /* ============================================================
+       Init
+       ============================================================ */
+    track('ViewContent', { content_name: 'NFC Review Card', content_ids: [CONFIG.productKey], content_type: 'product', value: CONFIG.listPriceCents / 100, currency: 'USD' });
+    setQty(CONFIG.defaultQty, false, true);
+    loadProduct();
+  })();
+  </script>
+</body>
+</html>
