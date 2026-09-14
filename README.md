@@ -29,7 +29,7 @@ Direct-response landing page for Facebook traffic that sells Merchynt's Google r
 1. **Create the promo code in the store admin:** code `REVIEWS30`, 30% off, product `nfc_card`, no minimum quantity. Until it exists the page shows "Offer pending" and full price.
 2. **Place one test order** from the live page through to the Stripe page and confirm the total shows $7 per card and no shipping line. (The automated test in this session stopped at the pay button; see the brief.)
 3. Paste the Meta Pixel, Clarity and Vercel Analytics tags into the commented placeholders in `<head>`. The Purchase event has to fire on the store's confirmation page, not here.
-4. Decide the domain. The Vercel deployment URL is in the brief; a custom domain like `reviews.merchynt.com` needs a CNAME.
+4. Decide the domain. Live now at https://merchynt-review-cards.vercel.app (Vercel project `nfc-review-cards` under the `jamesrsowers-9743` account); a custom domain like `reviews.merchynt.com` needs a CNAME.
 
 ## Deploying
 
