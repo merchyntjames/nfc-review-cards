@@ -15,6 +15,7 @@ Direct-response landing page for Facebook traffic that sells Merchynt's Google r
 | `assets/nfc-card-product.png` | The store's own product image (copied from reviewstore.merchynt.com). Used in the order summary. |
 | `assets/qr-flyer-product.png` | The store's QR flyer image, kept for a future QR variant. Not used on the page. |
 | `assets/merchynt-logo.svg` | Logo. |
+| `assets/og-image.jpg` | Open Graph / social preview, 1200x630 (Gemini 3 Pro Image, reference-matched to the card; logo composited in code). `og-image-square.jpg` is a 1200x1200 variant. Candidates and the white logo PNG live in `assets/og/`. |
 | `assets/source/` | Original PNG renders from the image generator. |
 
 ## How the order flow works
