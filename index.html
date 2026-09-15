@@ -733,7 +733,7 @@
         } else {
           state.coupon = null;
           if (!silent) showCouponNotice((r && r.message) || "That promo code isn't valid.");
-          else showCouponNotice('The ' + CONFIG.offerPercent + '% code ' + code + " isn't active yet, so the total below is the full price. Email reviewstore@merchynt.com and we'll sort it out.");
+          else showCouponNotice('The promo code ' + code + " isn't active in the store yet, so the total below is the full price. Email reviewstore@merchynt.com and we'll sort it out.");
         }
       } catch (e) {
         if (my !== couponReq) return;
