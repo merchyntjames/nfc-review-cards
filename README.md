@@ -7,6 +7,7 @@ Direct-response landing page for Facebook traffic that sells Merchynt's Google r
 | `index.html` | The page. Open it directly in a browser, or run the `nfc-review-cards` config in `.claude/launch.json` (port 3461). Single file: Tailwind CDN, DM Sans, vanilla JS. |
 | `creative-brief.md` | Research, strategy, page structure, copy rationale, claims and sources, tracking plan, test ideas, open questions. |
 | `replit-prompt.md` | Sectioned prompts to rebuild the page pixel for pixel in Replit (or inside the existing store app). |
+| `replit-stripe-promo-brief.md` | Brief plus paste-ready prompt for the store's Replit owner: accept Stripe promotion codes, auto-apply from `?promo=`, deliver the discount to the Stripe session, record it from the webhook. |
 | `lovable-prompt.md` | Sectioned prompts to rebuild the page pixel for pixel in Lovable as a React + Vite + Tailwind project (16 prompts: design system, one per section, API client and order state, wiring, behavior, QA). |
 | `assets/hero-tap.jpg` | Hero photo: customer tapping a phone on the card at a cafe counter (generated, GPT Image 2.5 via Higgsfield, reference-matched to the real card). |
 | `assets/salon-counter.jpg` | Card on a salon front desk (generated). Used in the Problem section. |
@@ -23,7 +24,7 @@ Direct-response landing page for Facebook traffic that sells Merchynt's Google r
 1. Quantity chips (1, 3, 5, 10) or a stepper. Price and savings update live.
 2. Business lookup by city and name (`GET /api/business-search`), or paste a Google review link. The link classifier is a copy of the store's, so the same links are accepted.
 3. Contact and shipping. Address autocomplete (`GET /api/address/autocomplete?search=`) and USPS verification (`POST /api/address/verify`) use the store's endpoints. If USPS can't confirm, the buyer can tick "ship as typed".
-4. The promo code in `CONFIG.couponCode` (`REVIEWS30`) is validated against `GET /api/orders/coupon` on load and every quantity change. If the store says it is invalid, the summary shows full price and an orange notice instead of silently over-promising.
+4. The promo code in `CONFIG.couponCode` (`REVIEWS30`), or one passed in the URL as `?promo=` / `?coupon=` / `?code=` (kept in sessionStorage), is validated against `GET /api/orders/coupon` on load and every quantity change. If the store says it is invalid, the summary shows full price and an orange notice instead of silently over-promising.
 5. "Proceed to Secure Checkout" posts the same payload the store's own checkout builds to `POST /api/orders`, then redirects to the returned Stripe `checkoutUrl`. Stripe returns the buyer to the store's `/order/confirmation` page.
 
 ## Before ads run

@@ -697,6 +697,11 @@
       const p = new URLSearchParams(location.search); const keep = {};
       ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','ttclid'].forEach(k => { if (p.get(k)) keep[k] = p.get(k); });
       if (Object.keys(keep).length) sessionStorage.setItem('nfc_lp_attribution', JSON.stringify(keep));
+      // A promo code in the ad URL (?promo=, ?coupon= or ?code=) overrides the configured code and survives reloads.
+      const urlCode = (p.get('promo') || p.get('coupon') || p.get('code') || '').trim().toUpperCase();
+      if (urlCode) sessionStorage.setItem('nfc_lp_promo', urlCode);
+      const savedCode = sessionStorage.getItem('nfc_lp_promo');
+      if (savedCode) CONFIG.couponCode = savedCode;
     } catch (e) {}
 
     /* ============================================================
